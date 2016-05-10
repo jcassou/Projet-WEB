@@ -3,12 +3,11 @@ $(document).ready(function() {
         url: "liste_pays.php"
     }).then(function(data) {
         
-       
        for(var x=0; x<data.length; x++){
-          var pays = data[x].nom_pays;
-          $('#dropdownpays').append("<OPTION value='"+pays+"'>");
-      }
-          
+       $('#dropdownpays').append(data[x].nom_pays);
+       $('#dropdownpays').append("<br>");
+       }
+       console.log(data);
        
     });
 });
