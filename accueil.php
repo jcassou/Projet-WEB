@@ -7,6 +7,7 @@
    <script src="jquery.js"></script>        
    <script src="liste_pays.js"></script>
   </head>
+  
  
   <?php include("champ_connexion.php") ?>
  
