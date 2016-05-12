@@ -6,7 +6,7 @@
 	 <meta charset="utf-8">
 	 <link href="site.css" rel="stylesheet">
    <script src="jquery.js"></script>
-   <script src="liste_pays.js"></script>
+   <script src="liste_infos_villes_pays.js"></script>
   </head>
    <?php
     session_start();
@@ -37,8 +37,9 @@
   </div>'; 
   }
   ?>
-  <body>
   
+  <body>
+     
     <nav id="entete">
 	    <div id="entete">
 		   <h1>
@@ -52,13 +53,20 @@
     <div id="main">	
     <nav id="menu">		
 		<h2>Pays:</h2>
-    <div id="liste_pays"></div>
+    Choisissez le pays qui vous intéresse dans la liste:
+    <SELECT id="liste_pays" onchange="checkField()" ><OPTION value =''></option></SELECT> 
+    
+    <div id="introvilles"></div>
+    <SELECT id="liste_villes" onchange="checkFieldVille()"><OPTION value =''></option></SELECT>
+    
+    <div id="introvilles2"></div>
+    <div id="infoville"></div>
 	
     <footer id="foot01"></footer>
 	 </div>
 	
 	<script src="script.js"></script>
 
+                               
 </body>
 </html>
-
