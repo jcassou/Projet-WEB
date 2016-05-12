@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html>
 <head>
   <title>TC Advisor</title>

@@ -26,15 +26,17 @@
 		}else{
 
 			echo 'Salut ';  
-			echo $_SESSION['login'];
-			echo "<br />Voici tes données personnelles que tu pourras moifier d'ici peu.";
-		}
-		?>
+      echo $_SESSION['login'];?>
+      <br />Voici tes données personnelles que tu pourras moifier d'ici peu.<br />
 
+      <?php include('info_utilisateur.php'); 
+		
+    }
+?>
 		<footer id="foot01"></footer>
 	</div>
 
-	<script src="script.js"></script>
+	
 
 </body>
 </html>

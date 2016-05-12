@@ -53,7 +53,8 @@
          }
          else{
          session_start();
-         $_SESSION['login']= $_POST['mail'];
+				 $_SESSION['login']= $_POST['mail'];
+				 
           echo '<p>GG tu as réussi à te connecter, redirection vers l\'accueil dans quelques secondes!</p>';
           header('refresh:3; url=accueil.php');
             exit();

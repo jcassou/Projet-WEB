@@ -2,16 +2,12 @@ $(document).ready(function() {
     $.ajax({
         url: "liste_pays.php"
     }).then(function(data) {
-
-
-	   $('#liste_pays').append("<SELECT id='pays'>");
-       for(var x=0; x<data.length; x++){      
-       $('#liste_pays').append("<option value='");
-       $('#liste_pays').append(data[x].nom_pays);
-       $('#liste_pays').append("'>");
+        
+       for(var x=0; x<data.length; x++){
+       $('#dropdownpays').append(data[x].nom_pays);
+       $('#dropdownpays').append("<br>");
        }
-       $('#liste_pays').append("</SELECT>");
+       console.log(data);
        
-
     });
 });

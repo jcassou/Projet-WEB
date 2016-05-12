@@ -23,7 +23,7 @@
 		  </div>';
       
       echo '<div id="inscript">
-      <form action="site_inscription.php">
+      <form action="inscription.php">
       <input type="submit" value="Inscription">
       </div>
       ';
@@ -32,7 +32,7 @@
    echo 'Salut ';
   echo $_SESSION['login'];
   echo '<div id="deconnect">
-  <form action=site_deconnexion.php>
+  <form action=deconnexion.php>
   <input type="submit" value="Deconnexion">
   </div>'; 
   }
