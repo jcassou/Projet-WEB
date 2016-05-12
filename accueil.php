@@ -5,9 +5,7 @@
 	 <meta charset="utf-8">
 	 <link href="site.css" rel="stylesheet">
    <script src="jquery.js"></script>        
-   <script src="liste_pays.js"></script>
   </head>
-  
  
   <?php include("champ_connexion.php") ?>
  
@@ -29,13 +27,16 @@
 		<h3>sur ce site vous pouvez : </h3>
     <?php
     if(isset($_SESSION['login'])){
-		echo '<a href="site_espace_personnel.php"><p>Accéder à votre espace personnel</p></a>';}
+		echo '<a href="site_formulaire_echange.php"><p>Donner les infos de vos échanges!</p></a>';
+		if($_SESSION['login'] == 'test'){
+    echo '<a href="site_espace_admin.php"><p>Acceder à l\'espace d\'administration car vous êtes trop un BG</p></a>';} }
     else{
     echo 'Connectez vous pour avoir accès à votre espace personnel!';}
     ?>
     
 		<p>Voir la liste des personnes parties (Départs)</p>
 		<p>Rechercher un pays</p>
+    
     <footer id="foot01"></footer>
 	 </div>
 	

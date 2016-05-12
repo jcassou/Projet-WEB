@@ -23,9 +23,19 @@
      $pwd1 = $_POST['pwd1'];
      $pwd2 = $_POST['pwd2'];
      
+     $req = mysql_query("SELECT adresse_mail_utilisateur FROM utilisateur WHERE adresse_mail_utilisateur = '".$mail."' ");
+     $req2 = mysql_num_rows($req);
+     if($req2 != 0)
+	{
+		echo 'Ce mail est deja enregistre dans la base de donnees';
+		header('refresh:3; url=accueil.php');
+		return;
+		}
+
+     
      if(strlen($nom)>=2){    
       if(strlen($prenom)>=2){       
-       if ((strlen($numero)==10) || strlen($numero)==0)){
+       if ((strlen($numero)==10) || (strlen($numero)==0)){
         if (strlen($mail)>= 4){
           if($pwd1 == $pwd2){
         mysql_query('INSERT INTO utilisateur (nom_utilisateur, prenom_utilisateur, promo_utilisateur, numero_telephone_utilisateur, adresse_mail_utilisateur, mot_de_passe_utilisateur) 

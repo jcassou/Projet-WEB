@@ -3,12 +3,15 @@ $(document).ready(function() {
         url: "liste_pays.php"
     }).then(function(data) {
 
-       for(var x=0; x<data.length; x++){
-       $('#dropdownpays').append("<a href='site_pays_detail.php?nom_pays="+data[x].nom_pays+"'>"+data[x].nom_pays+"</a>");
-       $('#dropdownpays').append("<br>");
+
+	   $('#liste_pays').append("<SELECT id='pays'>");
+       for(var x=0; x<data.length; x++){      
+       $('#liste_pays').append("<option value='");
+       $('#liste_pays').append(data[x].nom_pays);
+       $('#liste_pays').append("'>");
        }
-       console.log(data);
+       $('#liste_pays').append("</SELECT>");
+       
 
     });
 });
-

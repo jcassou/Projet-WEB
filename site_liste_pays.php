@@ -6,7 +6,7 @@
 	 <meta charset="utf-8">
 	 <link href="site.css" rel="stylesheet">
    <script src="jquery.js"></script>
-   <script src="liste_utilisateurs.js"></script>
+   <script src="liste_pays.js"></script>
   </head>
    <?php
     session_start();
@@ -23,7 +23,7 @@
 		  </div>';
       
       echo '<div id="inscript">
-      <form action="site_inscription.php">
+      <form action="inscription.php">
       <input type="submit" value="Inscription">
       </div>
       ';
@@ -32,7 +32,7 @@
    echo 'Salut ';
   echo $_SESSION['login'];
   echo '<div id="deconnect">
-  <form action=site_deconnexion.php>
+  <form action=deconnexion.php>
   <input type="submit" value="Deconnexion">
   </div>'; 
   }
@@ -51,9 +51,8 @@
     
     <div id="main">	
     <nav id="menu">		
-		<h2>Liste des utilisateurs inscrits sur ce site:</h2>
-    <div id="myDiv"><p> Nombre d'utilisateurs inscrits sur le site: </p></div>
-    <div id="myDiv2"><p> Noms des utilisateurs inscrits sur TC Advisor: </p></div>
+		<h2>Pays:</h2>
+    <div id="liste_pays"></div>
 	
     <footer id="foot01"></footer>
 	 </div>
@@ -62,3 +61,4 @@
 
 </body>
 </html>
+
